@@ -1,0 +1,17 @@
+server:
+  port: 8083
+
+dubbo:
+  application:
+    name: consumer
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    name: dubbo
+    port: 20882
+  scan:
+    base-packages: com.heshang
+  monitor:
+    protocol: registry
+  consumer:
+    timeout: 2000
